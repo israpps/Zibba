@@ -15,9 +15,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$follow_project'):
-                        message.channel.send('Hello!')
-
+    if message.content == "$follow_project"
+                        role = discord.utils.get(server.roles, name="Project follower")
+                        await client.add_roles(message.author.id, role)
 
 keep_alive()
 client.run(os.environ['TOKEN'])
